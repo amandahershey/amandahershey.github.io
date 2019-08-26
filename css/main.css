@@ -1,0 +1,167 @@
+html{
+    overflow: hidden;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 43px;
+  font-weight: 300;
+  color: #222222;
+  background: #ECECEC;
+}
+
+body a{
+    text-decoration: none;
+    color: #222222;
+    transition: color .2s linear;
+}
+
+body a:hover{
+    color: #93BEDF;
+}
+
+.clear{
+  clear: both;
+}
+
+.body-wrapper{
+    margin: 25px;
+    background-color: #fff;
+    position: relative;
+}
+
+.header{
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+  width: 1170px;
+}
+
+.header-logo{
+    padding: 80px 0;
+    text-align: center;
+}
+
+.header-logo img{
+    transition: opacity 0.3s linear;
+}
+
+.header-logo img:hover{
+    opacity: 0.2;
+}
+
+.toggler{
+    width: 20px;
+    height: 18px;
+    top: 80px;
+    right: 0;
+    position: absolute;
+    z-index: 10;
+}
+
+#toggle:hover{
+    cursor: pointer;
+}
+
+#toggle div, #toggle{
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#toggle div{
+    height: 4px;
+    margin-bottom: 3px;
+    background-color: #c2c2c2;
+}
+
+#toggle .third-menu-line{
+    margin-bottom: 0;
+}
+
+#toggle.on div{
+    background-color: #000;
+}
+
+#toggle.on .first-menu-line{
+    transform: rotate(45deg) translate(5px, 5px);
+    -ms-transform: rotate(45deg) translate(5px, 5px);
+    -webkit-transform: rotate(45deg) translate(5px, 5px);
+}
+
+#toggle.on .second-menu-line{
+    opacity: 0;
+}
+
+#toggle.on .third-menu-line{
+    transform:  rotate(-45deg) translate(5px, -5px);
+    -ms-transform:  rotate(-45deg) translate(5px, -5px);
+    -webkit-transform:  rotate(-45deg) translate(5px, -5px);
+}
+
+.hello{
+  display: block;
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hello h1{
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: 300;
+  max-width: 420px;
+  margin: 0 auto;
+  padding-bottom: 35px;
+  text-align: center;
+}
+
+.wave{
+  -webkit-animation: wave 0.3s linear infinite;
+  -moz-animation: wave 0.3s linear infinite;
+  -ms-animation: wave 0.3s linear infinite;
+  animation: wave 0.3s infinite;
+}
+
+@keyframes wave{
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+
+.arrow{
+  text-align: center;
+  margin: 8% 0;
+}
+
+.bounce{
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce{
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
