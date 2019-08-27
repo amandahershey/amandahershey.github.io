@@ -39,8 +39,8 @@ body a:hover
 .doc-loader
 {
     position: fixed;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     z-index: 99999;
@@ -61,7 +61,7 @@ body a:hover
 
 .nicescroll-rails-vr:hover
 {
-    cursor: pointer !important;
+    cursor: pointer;
 }
 
 .content-1170
@@ -120,12 +120,12 @@ body a:hover
     z-index: 10;
 }
 
-#toggle:hover
+.toggler:hover
 {
     cursor: pointer;
 }
 
-#toggle div, #toggle
+.toggler div, .toggler
 {
     -webkit-transition: all 0.3s linear;
     -moz-transition: all 0.3s linear;
@@ -136,40 +136,44 @@ body a:hover
     backface-visibility: hidden;
 }
 
-#toggle div
+.toggler div
 {
     height: 4px;
     margin-bottom: 3px;
     background-color: #c2c2c2;
 }
 
-#toggle .third-menu-line
+.toggler .third-menu-line
 {
     margin-bottom: 0;
 }
 
-#toggle.on div
+.on div
 {
     background-color: #000;
 }
 
-#toggle.on .first-menu-line
+.on .first-menu-line
 {
-    transform: rotate(45deg) translate(5px, 5px);
+    -moz-transform: rotate(45deg) translate(5px, 5px);
     -ms-transform: rotate(45deg) translate(5px, 5px);
     -webkit-transform: rotate(45deg) translate(5px, 5px);
+    -o-transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
-#toggle.on .second-menu-line
+.on .second-menu-line
 {
     opacity: 0;
 }
 
-#toggle.on .third-menu-line
+.on .third-menu-line
 {
-    transform:  rotate(-45deg) translate(5px, -5px);
-    -ms-transform:  rotate(-45deg) translate(5px, -5px);
-    -webkit-transform:  rotate(-45deg) translate(5px, -5px);
+    -moz-transform: rotate(-45deg) translate(5px, -5px);
+    -ms-transform: rotate(-45deg) translate(5px, -5px);
+    -webkit-transform: rotate(-45deg) translate(5px, -5px);
+    -o-transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .menu-wraper
@@ -185,9 +189,9 @@ body a:hover
     z-index: 10;
     overflow: auto;
     border: 30px solid;
-    box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     border-color: #cccccc;
 }
 
@@ -1093,7 +1097,7 @@ p.custom-field-class
     overflow: auto;
 }
 
-.contact-form input[name="your-name"]
+.contact-form input[name="name"]
 {
     margin-top: 0;
     padding-top: 0;
