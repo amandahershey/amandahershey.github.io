@@ -80,3 +80,27 @@ h1 {
 .add-items div {
   padding: 5px;
 }
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .wrapper {
+    min-width: 500px;
+    min-height: 500px;
+  }
+  h1 {
+    font-size: 4em;
+  }
+  .food li{
+    font-size: 2em;
+    margin: 0 15px;
+  }
+  .add-items {
+    margin-bottom: 10px;
+  }
+  .add-items input {
+    font-size: 1em;
+    padding: 15px;
+  }
+}
