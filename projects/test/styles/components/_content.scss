@@ -1,0 +1,158 @@
+#disasterKit{
+  background: $off-white;
+  box-sizing: border-box;
+  
+  img{
+    max-width: 50%;
+    overflow-x: hidden;
+  }
+}
+
+.section .container{
+  padding: 0 40px;
+  padding-bottom: 40px;
+}
+
+.section p{
+  font-family: 'Merriweather', sans-serif;
+  margin: auto;
+  color: black;
+  font-size: $m-size;
+  margin-bottom: 10px;
+  line-height: 150%;
+  text-align: justify;
+}
+
+.section__title{
+    font-size: $l-size;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    max-width: 280px;
+    text-align: center;
+}
+
+.align-left{
+  float: left;
+  margin-right: 20px;
+}
+
+.align-right{
+  float: right;
+  margin-left: 20px;
+}
+
+.slide-in {
+  opacity: 0;
+  transition: all .5s;
+}
+
+.align-left.slide-in {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+  transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}
+
+#fortify{
+  color: $off-white;
+
+  img{
+    max-width: 70%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  p{
+    color: $off-white;
+    padding: 10px;
+    text-align: justify;
+  }
+}
+
+.ease-in {
+  opacity: 0;
+  transition: all .5s;
+}
+
+.ease-in.active {
+  opacity: 1;
+}
+
+#questions{
+  background: $off-black;
+  color: $off-white;
+  height: 300px;
+
+  h1{
+    margin-bottom: 30px;
+  }
+  
+  .buttons{
+    max-width: 280px;
+    margin: auto;
+  }
+
+  a{
+    background: none;
+    text-decoration: none;
+    border: 0;
+    box-sizing: border-box;
+    margin: 1em;
+    padding: 1em 2em;
+    box-shadow: inset 0 0 0 2px $pearl;
+    color: $pearl;
+    font-size: $m-size;
+    font-weight: 700;
+    position: relative;
+    vertical-align: middle;
+    
+    &::before,
+    &::after {
+      box-sizing: inherit;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.center{
+  &:hover {
+    color: $blue;
+  }
+
+  &::before,
+  &::after {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center;
+  }
+
+  &::before {
+    border-top: 2px solid $blue;
+    border-bottom: 2px solid $blue;
+    transform: scale3d(0,1,1); 
+  }
+
+  &::after {
+    border-left: 2px solid $blue;
+    border-right: 2px solid $blue;
+    transform: scale3d(1,0,1);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    transform: scale3d(1,1,1);
+    transition: transform 0.5s;
+  }
+}
