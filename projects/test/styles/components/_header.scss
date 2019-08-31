@@ -1,0 +1,100 @@
+#header{
+  background: $off-black;
+  color: $off-white;
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100vw;
+  z-index: 100;
+  
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+    -webkit-box-shadow: 0 8px 6px -6px black;
+	  -moz-box-shadow: 0 8px 6px -6px black;
+	  box-shadow: 0 8px 6px -6px black;
+  }
+}
+@media (min-width: $mobile-breakpoint){
+  #header{
+    background: lightcoral;
+  }
+}
+
+// Title
+.header__title{
+  font-size: $l-size;
+  margin: $m-size;
+}
+
+// Hamburger toggler
+.hamburger{
+  background: $off-black;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-right: 20px;
+
+  .line{
+    width: 50px;
+    height: 5px;
+    background-color: $off-white;
+    display: block;
+    margin: 8px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+
+#hamburger.is-active .line:nth-child(2){
+  opacity: 0;
+}
+
+#hamburger.is-active .line:nth-child(1){
+  -webkit-transform: translateY(13px) rotate(45deg);
+  -ms-transform: translateY(13px) rotate(45deg);
+  -o-transform: translateY(13px) rotate(45deg);
+  transform: translateY(13px) rotate(45deg);
+}
+
+#hamburger.is-active .line:nth-child(3){
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+  -ms-transform: translateY(-13px) rotate(-45deg);
+  -o-transform: translateY(-13px) rotate(-45deg);
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+// Sidebar
+.navbar{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 200;
+  right: 0;
+  background: $off-black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  margin-top: 60px;
+  padding-top: 35px;
+
+  a{
+    color: $off-white;
+    display: flex;
+    font-size: $l-size;
+    margin: $m-size;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: darken($off-white, 20%);
+  }
+}

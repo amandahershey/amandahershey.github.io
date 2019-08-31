@@ -1405,6 +1405,12 @@ p.custom-field-class
 
 @media screen and (max-width: 805px) {
 
+    .page h1.entry-title
+    {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
     .grid, .grid-item.p_one
     {
         width: 570px;
